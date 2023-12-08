@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxi5f2waarwxu"]
+
+[ext_resource type="Script" path="res://sfx/sound_manager.gd" id="1_2omel"]
+[ext_resource type="AudioStream" uid="uid://835oajve0a5d" path="res://sfx/click.wav" id="2_t3fsk"]
+[ext_resource type="AudioStream" uid="uid://4qrytd027j1" path="res://music/onys-tranquility.mp3" id="3_cg3wl"]
+
+[node name="soundManager" type="Node"]
+script = ExtResource("1_2omel")
+
+[node name="sfx" type="Node" parent="."]
+
+[node name="clickSFX" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource("2_t3fsk")
+bus = &"SFX"
+
+[node name="music" type="Node" parent="."]
+
+[node name="mainMenu" type="AudioStreamPlayer" parent="music"]
+stream = ExtResource("3_cg3wl")
+autoplay = true
+bus = &"Music"
+
+[connection signal="finished" from="sfx/clickSFX" to="." method="_on_click_sfx_finished"]
+[connection signal="finished" from="music/mainMenu" to="." method="_on_main_menu_finished"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://boa1sk25all5k"]
+
+[ext_resource type="Script" path="res://ui/mainMenu/volume_slider.gd" id="1_gs53n"]
+
+[node name="volumeSlider" type="VSlider"]
+anchors_preset = -1
+anchor_left = 0.833
+anchor_top = 0.143
+anchor_right = 0.917
+anchor_bottom = 0.857
+offset_left = 0.0639954
+offset_top = -0.0159874
+offset_right = -0.0640106
+offset_bottom = 0.0159988
+pivot_offset = Vector2(8, 40)
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_gs53n")
+
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

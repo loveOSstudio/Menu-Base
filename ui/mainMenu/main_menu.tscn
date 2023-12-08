@@ -1,0 +1,780 @@
+[gd_scene load_steps=48 format=3 uid="uid://dya8wktmskmwr"]
+
+[ext_resource type="Script" path="res://ui/mainMenu/main_menu.gd" id="1_icd7r"]
+[ext_resource type="Texture2D" uid="uid://c1ccwqnlv4i4u" path="res://ui/mainMenu/backgroundDefault.png" id="1_kt5o8"]
+[ext_resource type="Texture2D" uid="uid://dhb1lvpoo8lt2" path="res://ui/mainMenu/logo.png" id="3_8qyyb"]
+[ext_resource type="Texture2D" uid="uid://bt3tqii35ktkm" path="res://ui/mainMenu/exitButton.png" id="3_cgymy"]
+[ext_resource type="Texture2D" uid="uid://drmvh0p116g3i" path="res://ui/mainMenu/exitButtonPressed.png" id="4_d3e46"]
+[ext_resource type="Texture2D" uid="uid://xk6jwta1ucbo" path="res://ui/mainMenu/exitButtonHover.png" id="5_w35jf"]
+[ext_resource type="Texture2D" uid="uid://ck88gsjim4qbg" path="res://ui/mainMenu/settingsButton.png" id="7_rany8"]
+[ext_resource type="Texture2D" uid="uid://dkqqbqhmii3g0" path="res://ui/mainMenu/settingsButtonPressed.png" id="8_aiwra"]
+[ext_resource type="Texture2D" uid="uid://cspa7r704aiq8" path="res://ui/mainMenu/settingsButtonHover.png" id="9_5kivh"]
+[ext_resource type="Texture2D" uid="uid://dq5rsgplpik88" path="res://ui/mainMenu/playButton.png" id="10_eferd"]
+[ext_resource type="Texture2D" uid="uid://drky3ak62hu3i" path="res://ui/mainMenu/playButtonPressed.png" id="11_ku780"]
+[ext_resource type="Texture2D" uid="uid://03682rysc4x7" path="res://ui/mainMenu/shopButton.png" id="11_vk184"]
+[ext_resource type="Texture2D" uid="uid://cehp0fmgtu1md" path="res://ui/mainMenu/playButtonHover.png" id="12_cl3dx"]
+[ext_resource type="Texture2D" uid="uid://bvvx5rj8owojc" path="res://ui/mainMenu/stuffButton.png" id="12_je12c"]
+[ext_resource type="Texture2D" uid="uid://lorxj2gaylkk" path="res://ui/mainMenu/newgroundsButton.png" id="13_r34qi"]
+[ext_resource type="Texture2D" uid="uid://bd24rofra1yti" path="res://ui/mainMenu/shopButtonPressed.png" id="13_tdgjo"]
+[ext_resource type="Texture2D" uid="uid://qkugqbo2gndc" path="res://ui/mainMenu/twitterButton.png" id="14_adk7c"]
+[ext_resource type="Texture2D" uid="uid://dl7leatwaimap" path="res://ui/mainMenu/shopButtonHover.png" id="14_ojh22"]
+[ext_resource type="Texture2D" uid="uid://blc7utxhgeq7j" path="res://ui/mainMenu/newgroundsButtonPressed.png" id="14_po7ie"]
+[ext_resource type="Texture2D" uid="uid://djgekexa4umq8" path="res://ui/mainMenu/newgroundsButtonHover.png" id="15_24m2a"]
+[ext_resource type="Texture2D" uid="uid://dw77ft33aecms" path="res://ui/mainMenu/itchioButton.png" id="15_deq3m"]
+[ext_resource type="Texture2D" uid="uid://cvej2cqi7raxs" path="res://ui/mainMenu/kofiButton.png" id="16_yvioe"]
+[ext_resource type="Texture2D" uid="uid://c2dky53gibna1" path="res://ui/mainMenu/kofiButtonPressed.png" id="17_v0fn7"]
+[ext_resource type="Texture2D" uid="uid://b2oi48ycy4ok" path="res://ui/mainMenu/stuffButtonPressed.png" id="17_wcqfc"]
+[ext_resource type="Texture2D" uid="uid://cuae2rsyqlwnh" path="res://ui/mainMenu/stuffButtonHover.png" id="18_aeosg"]
+[ext_resource type="Texture2D" uid="uid://cggcfry00qtx3" path="res://ui/mainMenu/kofiButtonHover.png" id="18_vkk1s"]
+[ext_resource type="Texture2D" uid="uid://dauboo8tabrq4" path="res://ui/mainMenu/youtubeButton.png" id="19_u3y7i"]
+[ext_resource type="Texture2D" uid="uid://dgc8ftarjv33j" path="res://ui/mainMenu/twitterButtonPressed.png" id="20_mvcvd"]
+[ext_resource type="Texture2D" uid="uid://vcgv4h18cpc6" path="res://ui/mainMenu/youtubeButtonPressed.png" id="20_xqcyy"]
+[ext_resource type="Texture2D" uid="uid://dpe7vwudf5xd4" path="res://ui/mainMenu/twitterButtonHover.png" id="21_00t0f"]
+[ext_resource type="Texture2D" uid="uid://coiwfixrc83rx" path="res://ui/mainMenu/youtubeButtonHover.png" id="21_pnl8u"]
+[ext_resource type="Texture2D" uid="uid://breartgqwg0pd" path="res://ui/mainMenu/itchioButtonPressed.png" id="23_dirgs"]
+[ext_resource type="Texture2D" uid="uid://oaxjcyfcisl3" path="res://ui/mainMenu/itchioButtonHover.png" id="24_ph82q"]
+[ext_resource type="PackedScene" uid="uid://bpiwsghm716c" path="res://ui/mainMenu/settings.tscn" id="31_m5yd8"]
+[ext_resource type="PackedScene" uid="uid://dxi5f2waarwxu" path="res://sfx/sound_manager.tscn" id="42_5rgwq"]
+
+[sub_resource type="Animation" id="Animation_jay6j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:pivot_offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(64, 24)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_u7rua"]
+resource_name = "idle"
+length = 12.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6, 9, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05, 0.95), Vector2(1, 1), Vector2(0.95, 1.05), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:pivot_offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(64, 24)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3, 9, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0174533, -0.0174533, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ed53i"]
+_data = {
+"RESET": SubResource("Animation_jay6j"),
+"idle": SubResource("Animation_u7rua")
+}
+
+[sub_resource type="Animation" id="Animation_iogqc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../play:pivot_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(32, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../play:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../play:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ipq7k"]
+resource_name = "idle"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../play:pivot_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(32, 32)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../play:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 0.9), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../play:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.8, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0174533, -0.0174533]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ye2od"]
+_data = {
+"RESET": SubResource("Animation_iogqc"),
+"idle": SubResource("Animation_ipq7k")
+}
+
+[sub_resource type="Animation" id="Animation_4fuh1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../shop:pivot_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(24, 24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../shop:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../shop:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_wn6vp"]
+resource_name = "idle"
+length = 4.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../shop:pivot_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(24, 24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../shop:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05, 0.95), Vector2(0.95, 1.05), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../shop:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0174533, -0.0174533, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../stuff:pivot_offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(24, 24)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../stuff:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05, 0.95), Vector2(0.95, 1.05), Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../stuff:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0174533, 0.0174533, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2skxl"]
+_data = {
+"RESET": SubResource("Animation_4fuh1"),
+"idle": SubResource("Animation_wn6vp")
+}
+
+[sub_resource type="Animation" id="Animation_d24sh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("itchio:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("itchio:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_juwks"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("itchio:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05, 0.95), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("itchio:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0174533, -0.0174533, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("twitter:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05, 0.95), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("twitter:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0174533, -0.0174533, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("kofi:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05, 0.95), Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("kofi:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0174533, -0.0174533, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("newgrounds:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05, 0.95), Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("newgrounds:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0174533, -0.0174533, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("exit:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05, 0.95), Vector2(1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("exit:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0174533, -0.0174533, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("settings:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05, 0.95), Vector2(1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("settings:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0174533, -0.0174533, 0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("youtube:scale")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05, 0.95), Vector2(1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("youtube:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0174533, -0.0174533, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p6q87"]
+_data = {
+"RESET": SubResource("Animation_d24sh"),
+"idle": SubResource("Animation_juwks")
+}
+
+[node name="mainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_icd7r")
+
+[node name="background" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="background"]
+motion_mirroring = Vector2(512, 288)
+
+[node name="Sprite2D" type="Sprite2D" parent="background/ParallaxLayer"]
+texture = ExtResource("1_kt5o8")
+centered = false
+
+[node name="logo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.222
+anchor_right = 0.5
+anchor_bottom = 0.222
+offset_left = -96.0
+offset_top = -25.6493
+offset_right = 96.0
+offset_bottom = 22.3508
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(64, 24)
+texture = ExtResource("3_8qyyb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="logo"]
+libraries = {
+"": SubResource("AnimationLibrary_ed53i")
+}
+autoplay = "idle"
+
+[node name="menu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="exit" type="TextureButton" parent="menu"]
+layout_mode = 1
+offset_right = 32.0001
+offset_bottom = 32.0002
+pivot_offset = Vector2(16, 16)
+texture_normal = ExtResource("3_cgymy")
+texture_pressed = ExtResource("4_d3e46")
+texture_hover = ExtResource("5_w35jf")
+
+[node name="settings" type="TextureButton" parent="menu"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset = Vector2(16, 16)
+texture_normal = ExtResource("7_rany8")
+texture_pressed = ExtResource("8_aiwra")
+texture_hover = ExtResource("9_5kivh")
+
+[node name="play" type="TextureButton" parent="menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.611
+anchor_right = 0.5
+anchor_bottom = 0.611
+offset_left = -32.0
+offset_top = -31.984
+offset_right = 32.0
+offset_bottom = 32.016
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(32, 0)
+texture_normal = ExtResource("10_eferd")
+texture_pressed = ExtResource("11_ku780")
+texture_hover = ExtResource("12_cl3dx")
+
+[node name="shop" type="TextureButton" parent="menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_top = 0.611
+anchor_right = 0.75
+anchor_bottom = 0.611
+offset_left = -24.0
+offset_top = -23.984
+offset_right = 24.0
+offset_bottom = 24.016
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(24, 24)
+texture_normal = ExtResource("11_vk184")
+texture_pressed = ExtResource("13_tdgjo")
+texture_hover = ExtResource("14_ojh22")
+
+[node name="stuff" type="TextureButton" parent="menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.611
+anchor_right = 0.25
+anchor_bottom = 0.611
+offset_left = -24.0
+offset_top = -23.984
+offset_right = 24.0
+offset_bottom = 24.016
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.00273972
+scale = Vector2(0.992151, 1.00785)
+pivot_offset = Vector2(24, 24)
+texture_normal = ExtResource("12_je12c")
+texture_pressed = ExtResource("17_wcqfc")
+texture_hover = ExtResource("18_aeosg")
+
+[node name="youtube" type="TextureButton" parent="menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.002
+anchor_top = 0.665
+anchor_right = -0.002
+anchor_bottom = 0.665
+offset_left = 0.512
+offset_top = -15.76
+offset_right = 32.512
+offset_bottom = 16.24
+grow_vertical = 2
+rotation = 0.0143319
+scale = Vector2(1.03285, 0.967154)
+pivot_offset = Vector2(16, 16)
+texture_normal = ExtResource("19_u3y7i")
+texture_pressed = ExtResource("20_xqcyy")
+texture_hover = ExtResource("21_pnl8u")
+
+[node name="newgrounds" type="TextureButton" parent="menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.002
+anchor_top = 0.557
+anchor_right = 1.002
+anchor_bottom = 0.557
+offset_left = -32.512
+offset_top = -16.208
+offset_right = -0.512024
+offset_bottom = 15.792
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(16, 16)
+texture_normal = ExtResource("13_r34qi")
+texture_pressed = ExtResource("14_po7ie")
+texture_hover = ExtResource("15_24m2a")
+
+[node name="kofi" type="TextureButton" parent="menu"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -32.0
+offset_right = 32.0
+grow_vertical = 0
+pivot_offset = Vector2(16, 16)
+texture_normal = ExtResource("16_yvioe")
+texture_pressed = ExtResource("17_v0fn7")
+texture_hover = ExtResource("18_vkk1s")
+
+[node name="twitter" type="TextureButton" parent="menu"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -32.0
+offset_bottom = 32.0
+grow_horizontal = 0
+pivot_offset = Vector2(16, 16)
+texture_normal = ExtResource("14_adk7c")
+texture_pressed = ExtResource("20_mvcvd")
+texture_hover = ExtResource("21_00t0f")
+
+[node name="itchio" type="TextureButton" parent="menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.333
+anchor_right = 1.0
+anchor_bottom = 0.333
+offset_left = -32.0
+offset_top = -15.952
+offset_bottom = 16.048
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(16, 16)
+texture_normal = ExtResource("15_deq3m")
+texture_pressed = ExtResource("23_dirgs")
+texture_hover = ExtResource("24_ph82q")
+
+[node name="bigButtonAnimations" type="AnimationPlayer" parent="menu"]
+root_node = NodePath("../mediumButtonAnimations")
+libraries = {
+"": SubResource("AnimationLibrary_ye2od")
+}
+autoplay = "idle"
+
+[node name="mediumButtonAnimations" type="AnimationPlayer" parent="menu"]
+root_node = NodePath("../smallButtonAnimations")
+libraries = {
+"": SubResource("AnimationLibrary_2skxl")
+}
+autoplay = "idle"
+
+[node name="smallButtonAnimations" type="AnimationPlayer" parent="menu"]
+libraries = {
+"": SubResource("AnimationLibrary_p6q87")
+}
+autoplay = "idle"
+
+[node name="settings" parent="." instance=ExtResource("31_m5yd8")]
+visible = false
+layout_mode = 1
+
+[node name="soundManager" parent="." instance=ExtResource("42_5rgwq")]
+
+[connection signal="pressed" from="menu/exit" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="menu/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="menu/youtube" to="." method="_on_youtube_pressed"]
+[connection signal="pressed" from="menu/newgrounds" to="." method="_on_newgrounds_pressed"]
+[connection signal="pressed" from="menu/kofi" to="." method="_on_kofi_pressed"]
+[connection signal="pressed" from="menu/twitter" to="." method="_on_twitter_pressed"]
+[connection signal="pressed" from="menu/itchio" to="." method="_on_itchio_pressed"]

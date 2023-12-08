@@ -1,0 +1,344 @@
+[gd_scene load_steps=42 format=3 uid="uid://bpiwsghm716c"]
+
+[ext_resource type="Script" path="res://ui/mainMenu/settings.gd" id="1_yxl1k"]
+[ext_resource type="Texture2D" uid="uid://dx2dc631uj7yi" path="res://ui/mainMenu/settingsPopup.png" id="2_vigfo"]
+[ext_resource type="Texture2D" uid="uid://c644u7pt6wwha" path="res://ui/mainMenu/closeButton.png" id="3_bq62o"]
+[ext_resource type="Texture2D" uid="uid://bphtpgtduhhy6" path="res://ui/mainMenu/closeButtonPressed.png" id="4_753fu"]
+[ext_resource type="Texture2D" uid="uid://c3t162khpu1lf" path="res://ui/mainMenu/closeButtonHover.png" id="5_q85na"]
+[ext_resource type="Texture2D" uid="uid://dummrxqjoy11g" path="res://ui/mainMenu/fullscreenButton.png" id="6_dihms"]
+[ext_resource type="Texture2D" uid="uid://dhyhf82a0cicv" path="res://ui/mainMenu/fullscreenButtonPressed.png" id="7_3ugyv"]
+[ext_resource type="Texture2D" uid="uid://dvqmypcko8yrv" path="res://ui/mainMenu/fullscreenButtonHover.png" id="8_nv3dp"]
+[ext_resource type="Texture2D" uid="uid://d3qmqgcbfancu" path="res://ui/mainMenu/windowedButton.png" id="9_p2ueh"]
+[ext_resource type="Texture2D" uid="uid://dca54k35nowpc" path="res://ui/mainMenu/windowedButtonPressed.png" id="10_ylcsy"]
+[ext_resource type="Texture2D" uid="uid://bbnxxkuyjk6bs" path="res://ui/mainMenu/windowedButtonHover.png" id="11_ksw3y"]
+[ext_resource type="PackedScene" uid="uid://boa1sk25all5k" path="res://ui/mainMenu/volume_slider.tscn" id="12_rkgpv"]
+[ext_resource type="Texture2D" uid="uid://btyd8nkts4vbd" path="res://ui/mainMenu/musicSliderGrabber.png" id="13_pr8wj"]
+[ext_resource type="Texture2D" uid="uid://ccip6m6osauih" path="res://ui/mainMenu/musicSliderGrabberPressed.png" id="14_clm3j"]
+[ext_resource type="Texture2D" uid="uid://kkvy38lhtll1" path="res://ui/mainMenu/slider.png" id="15_llktb"]
+[ext_resource type="Texture2D" uid="uid://uiehi868hylk" path="res://ui/mainMenu/sfxSliderGrabber.png" id="16_33d6q"]
+[ext_resource type="Texture2D" uid="uid://6w6dfeklawid" path="res://ui/mainMenu/sfxSliderGrabberPressed.png" id="17_myiic"]
+[ext_resource type="Texture2D" uid="uid://crulochnvojrg" path="res://ui/mainMenu/vsync.png" id="18_sqi1k"]
+[ext_resource type="Texture2D" uid="uid://ci0foj3o58s8n" path="res://ui/mainMenu/checkButtonChecked.png" id="18_x6tgj"]
+[ext_resource type="Texture2D" uid="uid://dcfeb7mqg232g" path="res://ui/mainMenu/borderless.png" id="19_k0hta"]
+[ext_resource type="Texture2D" uid="uid://bmp2b7jwnqyfu" path="res://ui/mainMenu/checkButtonUnchecked.png" id="19_rw72r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6hn8a"]
+texture = ExtResource("15_llktb")
+texture_margin_left = 8.0
+texture_margin_top = 48.0
+texture_margin_right = 8.0
+texture_margin_bottom = 48.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a3yt3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8j6va"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3tth4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cmslc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kxveq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w3hfp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ioui4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4haku"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hdilp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pc5m4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_midqy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r43x1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t43u2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cocum"]
+
+[sub_resource type="Animation" id="Animation_8jiww"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("popup:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("popup:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(32, 16)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("popup:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_43qis"]
+resource_name = "close"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("popup:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.5, 1), Vector2(1e-05, 1e-05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("popup:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(32, 16), Vector2(32, 32), Vector2(32, 64)]
+}
+
+[sub_resource type="Animation" id="Animation_h5rlk"]
+resource_name = "idle"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("popup:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.2, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.00872665, -0.00872665, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("popup:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.015, 0.985), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ws3to"]
+resource_name = "open"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("popup:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.5, 1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("popup:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(32, 64), Vector2(32, 32), Vector2(32, 16)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ol1k"]
+_data = {
+"RESET": SubResource("Animation_8jiww"),
+"close": SubResource("Animation_43qis"),
+"idle": SubResource("Animation_h5rlk"),
+"open": SubResource("Animation_ws3to")
+}
+
+[node name="settings" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -72.0
+offset_right = 128.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yxl1k")
+
+[node name="popup" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = 16.0
+offset_right = 224.0
+offset_bottom = 128.0
+pivot_offset = Vector2(96, 56)
+texture = ExtResource("2_vigfo")
+stretch_mode = 3
+
+[node name="closeGrid" type="GridContainer" parent="popup"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.214
+anchor_right = 0.125
+anchor_bottom = 0.214
+offset_left = -16.0
+offset_top = -15.968
+offset_right = 16.0
+offset_bottom = 16.032
+
+[node name="close" type="TextureButton" parent="popup/closeGrid"]
+layout_mode = 2
+texture_normal = ExtResource("3_bq62o")
+texture_pressed = ExtResource("4_753fu")
+texture_hover = ExtResource("5_q85na")
+
+[node name="bottomButtonGrid" type="GridContainer" parent="popup"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.786
+anchor_right = 0.125
+anchor_bottom = 0.786
+offset_left = -16.0
+offset_top = -16.032
+offset_right = 16.0
+offset_bottom = 15.968
+grow_horizontal = 2
+grow_vertical = 0
+columns = 2
+
+[node name="fullscreen" type="TextureButton" parent="popup/bottomButtonGrid"]
+layout_mode = 2
+texture_normal = ExtResource("6_dihms")
+texture_pressed = ExtResource("7_3ugyv")
+texture_hover = ExtResource("8_nv3dp")
+
+[node name="windowed" type="TextureButton" parent="popup/bottomButtonGrid"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("9_p2ueh")
+texture_pressed = ExtResource("10_ylcsy")
+texture_hover = ExtResource("11_ksw3y")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popup"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 8.0
+offset_right = 184.0
+offset_bottom = 104.0
+
+[node name="music" parent="popup/HBoxContainer" instance=ExtResource("12_rkgpv")]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("13_pr8wj")
+theme_override_icons/grabber_highlight = ExtResource("14_clm3j")
+theme_override_styles/slider = SubResource("StyleBoxTexture_6hn8a")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_a3yt3")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_8j6va")
+busName = "Music"
+
+[node name="sfx" parent="popup/HBoxContainer" instance=ExtResource("12_rkgpv")]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("16_33d6q")
+theme_override_icons/grabber_highlight = ExtResource("17_myiic")
+theme_override_styles/slider = SubResource("StyleBoxTexture_6hn8a")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_a3yt3")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_8j6va")
+busName = "SFX"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -40.0
+offset_right = 44.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="vsync" type="CheckButton" parent="popup/VBoxContainer"]
+layout_mode = 2
+theme_override_icons/checked = ExtResource("18_x6tgj")
+theme_override_icons/unchecked = ExtResource("19_rw72r")
+theme_override_styles/normal = SubResource("StyleBoxTexture_3tth4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cmslc")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_kxveq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_w3hfp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ioui4")
+theme_override_styles/focus = SubResource("StyleBoxTexture_4haku")
+button_pressed = true
+icon = ExtResource("18_sqi1k")
+
+[node name="borderless" type="CheckButton" parent="popup/VBoxContainer"]
+layout_mode = 2
+theme_override_icons/checked = ExtResource("18_x6tgj")
+theme_override_icons/unchecked = ExtResource("19_rw72r")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hdilp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pc5m4")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_midqy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_r43x1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_t43u2")
+theme_override_styles/focus = SubResource("StyleBoxTexture_cocum")
+icon = ExtResource("19_k0hta")
+
+[node name="settingsAnimations" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6ol1k")
+}
+
+[connection signal="pressed" from="popup/closeGrid/close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="popup/bottomButtonGrid/fullscreen" to="." method="_on_fullscreen_pressed"]
+[connection signal="pressed" from="popup/bottomButtonGrid/windowed" to="." method="_on_windowed_pressed"]
+[connection signal="toggled" from="popup/VBoxContainer/vsync" to="." method="_on_vsync_toggled"]
+[connection signal="toggled" from="popup/VBoxContainer/borderless" to="." method="_on_borderless_toggled"]
+[connection signal="animation_finished" from="settingsAnimations" to="." method="_on_settings_animations_animation_finished"]
